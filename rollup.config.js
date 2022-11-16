@@ -1,22 +1,24 @@
-import babel from "rollup-plugin-babel";
-import resolve from "@rollup/plugin-node-resolve";
-import external from "rollup-plugin-peer-deps-external";
+import terser from "@rollup/plugin-terser";
+import { nodeResolve } from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
+import babel from "@rollup/plugin-babel";
 import postcss from "rollup-plugin-postcss";
-import { terser } from "rollup-plugin-terser";
+import peerDepsExternal from "rollup-plugin-peer-deps-external";
 
-export default [
-  {
-    input: "./src/index.js",
-    output: [
-      { file: "dist/index.js", format: "cjs" },
-      { file: "dist/index.es.js", format: "es", exports: "named" },
-    ],
-    plugins: [
-      babel({ exclude: "node_modules/**", presets: ["@babel/preset-react"] }),
-      external(),
-      resolve(),
-      postcss({ plugins: [], minimize: true }),
-      terser(),
-    ],
-  },
-];
+const packageJson = require("./package.json");
+
+export default {
+  input: "src/index.js",
+  output: [
+    { file: packageJson.main, format: "cjs" },
+    { file: packageJson.module, format: "es", exports: "named" },
+  ],
+  plugins: [
+    peerDepsExternal(),
+    nodeResolve(),
+    commonjs(),
+    babel(),
+    terser(),
+    postcss({ plugins: [], minimize: true }),
+  ],
+};
