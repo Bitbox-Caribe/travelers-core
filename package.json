@@ -1,6 +1,6 @@
 {
   "name": "@bitbox-caribe/travelers-core",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "Componentes Library",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -42,24 +42,30 @@
     "@storybook/testing-library": "^0.0.13",
     "autoprefixer": "^10.4.13",
     "babel-loader": "^8.3.0",
+    "classnames": "^2.3.2",
     "moment": "^2.29.4",
+    "next": "^13.0.3",
     "notistack": "^2.0.8",
     "postcss": "^8.4.19",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.39.4",
     "rollup": "^2.79.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-svg-import": "^1.6.0",
     "tailwindcss": "^3.2.4",
     "uuid": "^9.0.0"
   },
   "peerDependencies": {
+    "classnames": "^2.3.2",
+    "moment": "^2.29.4",
+    "next": "^13.0.3",
+    "notistack": "^2.0.8",
+    "postcss": "^8.4.19",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "tailwindcss": "^3.2.4",
-    "notistack": "^2.0.8",
-    "postcss": "^8.4.19",
-    "uuid": "^9.0.0",
-    "moment": "^2.29.4"
+    "uuid": "^9.0.0"
   }
 }

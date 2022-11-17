@@ -1,0 +1,21 @@
+.input {
+  @apply w-full border border-gray-400 rounded-md p-4;
+  border-width: 1px;
+  border-style: solid;
+  transition: all 150ms linear;
+}
+
+.input:focus {
+  @apply border-gray-600;
+  outline: none;
+  -webkit-outline: none;
+  -ms-outline: none;
+}
+
+.input::placeholder {
+  @apply text-gray-600;
+}
+
+.label {
+  @apply inline-block mb-2;
+}

@@ -1,0 +1,21 @@
+.errorMessage {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 100%;
+  color: red;
+  font-size: 0.95rem;
+}
+
+.sendButton {
+  @apply flex w-full mt-6 bg-blue-500 rounded-lg h-16 items-center justify-center;
+  transition: all 250ms linear;
+}
+
+.sendButton:disabled {
+  cursor: not-allowed;
+}
+
+/* .sendButton:hover {
+  background-color: #2da3e7;
+} */

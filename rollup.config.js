@@ -4,6 +4,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import babel from "@rollup/plugin-babel";
 import postcss from "rollup-plugin-postcss";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
+import svg from "rollup-plugin-svg-import";
 
 const packageJson = require("./package.json");
 
@@ -15,9 +16,10 @@ export default {
   ],
   plugins: [
     peerDepsExternal(),
-    nodeResolve(),
     babel({ babelHelpers: "bundled" }),
+    nodeResolve(),
     commonjs(),
+    svg(),
     terser(),
     postcss({
       minimize: true,
