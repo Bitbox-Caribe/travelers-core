@@ -19,6 +19,11 @@ export default {
     babel({ babelHelpers: "bundled" }),
     commonjs(),
     terser(),
-    postcss({ plugins: [], minimize: true }),
+    postcss({
+      minimize: true,
+      modules: true,
+      autoModules: true,
+      extract: true,
+    }),
   ],
 };
