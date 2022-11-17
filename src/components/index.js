@@ -1,1 +1,1 @@
-// export { default as ComponentName } from "/Component/Path";
+export { default as Greeting } from "./Greeting";
