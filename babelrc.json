@@ -1,4 +1,0 @@
-{
-  "presets": ["preset-react"],
-  "exclude": ["node_modules/**"]
-}

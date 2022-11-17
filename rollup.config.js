@@ -16,8 +16,8 @@ export default {
   plugins: [
     peerDepsExternal(),
     nodeResolve(),
+    babel({ babelHelpers: "bundled" }),
     commonjs(),
-    babel(),
     terser(),
     postcss({ plugins: [], minimize: true }),
   ],
